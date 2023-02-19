@@ -1,3 +1,9 @@
+<?php 
+
+    include_once '../database.php';
+    $query = mysqli_query($conn,"SELECT * FROM product WHERE p_Type='Dishes' ");
+   
+?>
 <!DOCTYPE html>
 <html lang="en"><!-- Basic -->
 <head>
@@ -23,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootsrtap.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">    
     <!-- Site CSS -->
-    <link rel="stylesheet" href="../css/style1.css">    
+    <link rel="stylesheet" href="../css/style.css">    
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="../css/responsive.css">
     <!-- Custom CSS -->
@@ -76,6 +82,36 @@
     padding:10px;
 }
 </style>
+<style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        font-size:20px;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #d65106;color: white; font-weight: normal;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+      
+</style>
 </head>
 
 <body>
@@ -104,7 +140,14 @@
                         
                         <li class="nav-item"><a class="nav-link" href="../contact.php">Contact</a></li>
 
-            <li class="nav-item"><a class="nav-link" href="../feedback.php">Feedback</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../feedback.php">Feedback</a></li>
+                        <div class="dropdown">
+                            <li class="nav-item "><a class="nav-link" href="../profile.php"><i class="fa fa-user" style="font-size:24px"></i></a></li>
+                            <div class="dropdown-content">
+                                <a href="../editProfile.php">Edit Profile</a>
+                                <a href="../logout.php">Logout</a>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -128,79 +171,42 @@
     <main class="grid">
   
   
-    <article>
-        <img src="../images/2.jpg" alt="Sample photo">
-        <div class="text">
-            <div style="display:inline-block;">
-                <h3>Pizza</h3>
-            </div>  
-            <div style=" float:right">
-                <h3>500$</h3>
-            </div>  
-            <h4>This is special Gujarati </h4>
-        </div>
-        <div class="gridbtn">
-            <button class="btn2" type="submit" style="margin-right:17px">
-                <i class="fa fa-heart" style="font-size:30px;"></i>
-            </button>
-
-            <button class="btn2" type="submit">
-                <i class="fa fa-shopping-cart"  style="font-size:30px"></i>
-            </button> 
-
-            <button class="btn2" type="submit"  style="font-size:20px;letter-spacing: 3px; width:200px; float:right; ">ORDER</button>
-        </div>
+     <?php 
+    if(mysqli_num_rows($query)>0)
+    {
+       
+         while ($row = mysqli_fetch_array($query)) {
         
-  </article>
-  <article>
-        <img src="../images/2.jpg" alt="Sample photo">
-        <div class="text">
-            <div style="display:inline-block;">
-                <h3>Pizza</h3>
-            </div>  
-            <div style=" float:right">
-                <h3>500$</h3>
-            </div>  
-            <h4>This is special Gujarati </h4>
-        </div>
-        <div class="gridbtn">
-            <button class="btn2" type="submit" style="margin-right:17px">
-                <i class="fa fa-heart" style="font-size:30px;"></i>
-            </button>
-
-            <button class="btn2" type="submit">
-                <i class="fa fa-shopping-cart"  style="font-size:30px"></i>
-            </button> 
-
-            <button class="btn2" type="submit"  style="font-size:20px;letter-spacing: 3px; width:200px; float:right; ">ORDER</button>
-        </div>
-        
-  </article>
-  <article>
-        <img src="../images/2.jpg" alt="Sample photo">
-        <div class="text">
-            <div style="display:inline-block;">
-                <h3>Pizza</h3>
-            </div>  
-            <div style=" float:right">
-                <h3>500$</h3>
-            </div>  
-            <h4>This is special Gujarati </h4>
-        </div>
-        <div class="gridbtn">
-            <button class="btn2" type="submit" style="margin-right:17px">
-                <i class="fa fa-heart" style="font-size:30px;"></i>
-            </button>
-
-            <button class="btn2" type="submit">
-                <i class="fa fa-shopping-cart"  style="font-size:30px"></i>
-            </button> 
-
-            <button class="btn2" type="submit"  style="font-size:20px;letter-spacing: 3px; width:200px; float:right; ">ORDER</button>
-        </div>
-        
-  </article>
+    ?>
   
+    <article>
+        <img src="<?php echo $row['p_photo'];?>" alt="Sample photo" height=250px width=100%>
+        <div class="text">
+            <div style="display:inline-block;">
+                <h3><?php echo $row['p_Name'];?></h3>
+            </div>  
+            <div style=" float:right">
+                <h3><?php echo $row['p_Price'];?>$</h3>
+            </div>  
+            <h4><?php echo $row['p_Description'];?></h4>
+        </div>
+        <div class="gridbtn">
+            
+
+            <button class="btn2" name="cart" type="submit" onclick="window.location.href = '../AddToCart.php?p_id=<?php echo $row['p_id']; ?>' ">
+                <i class="fa fa-shopping-cart"   style="font-size:30px"></i>
+            </button> 
+
+             <button class="btn2" type="submit"  style="font-size:20px;letter-spacing: 3px; width:200px; float:right;" onclick="window.location.href = '../order.php?p_id=<?php echo $row['p_id']; ?>' ">ORDER</button>
+        </div>
+        
+  </article>
+ 
+  <?php 
+
+        }
+    }
+  ?>
 
 
 </main>

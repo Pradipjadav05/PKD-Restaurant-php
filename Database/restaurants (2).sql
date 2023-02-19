@@ -235,8 +235,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `mobile`, `city`, `distric`, `zipcode`, `address`, `photo`, `pass`) VALUES
-(1, 'Meet Gajera', 'mgajera967@rku.ac.in',9537230057, 'Rajkot', 'Rajkot', 360004, 'Patkhilori, Rajkot,360004', 'person/IMG_20210224_093950_549.jpg', '123456'),
-(3, 'Isha Galani', 'igalani273@rku.ac.in',8128814131, '', '', 0, '', NULL, '100');
+(1, 'Pradip Jadav', 'pjadav669@rku.ac.in', 9033372216, 'Surendranagar', 'Surendranagar', 363421, 'Bhadiyad, Surendranagar,363421', 'person/IMG_20210224_093950_549.jpg', '123456'),
+(3, 'Keyur Bhut', 'kbhut865@rku.ac.in', 6353435399, '', '', 0, '', NULL, '100');
 
 --
 -- Indexes for dumped tables

@@ -26,6 +26,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="./login/css/util1.css">
 	<link rel="stylesheet" type="text/css" href="./login/css/main1.css">
+	
 <!--===============================================================================================-->
 </head>
 <body>
@@ -42,12 +43,12 @@
 						<!--<img src="./login/images/avatar-01.jpg" alt="AVATAR">-->
 					</span>
 
-					<div class="wrap-input100 validate-input m-t-50 m-b-35" data-validate = "Enter valide Email">
+					<div class="wrap-input100 validate-input m-t-50 m-b-35" data-validate = "Enter Email">
 						<input class="input100" type="text" name="email">
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter valide password">
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
 						<input class="input100" type="password" name="pass">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
@@ -79,11 +80,11 @@
 
 						<li>
 							<span class="txt1">
-								Admin Login Here 
+								Admin Login  
 							</span>
 
 							<a href="./Admin/admin.php" class="txt2">
-								Admin
+								Here
 							</a>
 						</li>
 					</ul>

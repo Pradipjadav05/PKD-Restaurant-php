@@ -7,8 +7,8 @@
 					<div class="overflow-hidden">
 						<h4>Phone</h4>
 						<p class="lead">
-							+91 9537230057 <br>
-							+91 8128814131
+							+91 6353435399 <br>
+							+91 9033372216
 						</p>
 					</div>
 				</div>
@@ -17,8 +17,8 @@
 					<div class="overflow-hidden">
 						<h4>Email</h4>
 						<p class="lead">
-							meetgajera413@gmail.com
-							ishagalani1517@gmail.com
+							keyurbhut90@gmail.com
+							pradipjadav90@gmail.com
 						</p>
 					</div>
 				</div>
@@ -27,8 +27,8 @@
 					<div class="overflow-hidden">
 						<h4>Location</h4>
 						<p class="lead">
-							Patkhilori <br>
-							Rajkot
+							Meta Khambhaliya <br>
+							Bhadiyad
 						</p>
 					</div>
 				</div>
@@ -43,11 +43,11 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<h3>Useful Links</h3>
-					<p class="lead"><a href="#">Menu</a></p>
-					<p class="lead"><a href="#">Reservation</a></p>
-					<p class="lead"><a href="#">Menu</a></p>
-					<p class="lead"><a href="#">Menu</a></p>
-					<p class="lead"><a href="#">Menu</a></p>
+					<p class="lead"><a href="menu.php">Menu</a></p>
+					<p class="lead"><a href="reservation.php">Reservation</a></p>
+					<p class="lead"><a href="about.php">About</a></p>
+					<p class="lead"><a href="contact.php">Contact</a></p>
+					<p class="lead"><a href="feedback.php">Feedback</a></p>
 
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -70,8 +70,9 @@
 				<div class="col-lg-3 col-md-6">
 					<h3>Contact information</h3>
 					<p class="lead">PKD Restorents, Rajkot 360050, India</p>
-					<p class="lead"><a href="#">+01 2000 800 9999</a></p>
-					<p><a href="#"> info@admin.com</a></p>
+					<p class="lead"><a href="#">+91 6353 435 399</a></p>
+					<p class="lead"><a href="#">+91 9033 372 216</a></p>
+					<p><a href="#"> PKDRestorants@gmail.com</a></p>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>Opening hours</h3>
